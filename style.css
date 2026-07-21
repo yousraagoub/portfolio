@@ -376,13 +376,17 @@ body.dark .navbar{
 
 .hero-text h1{
 
-    font-size:4.8rem;
+    font-size:clamp(4rem, 8vw, 6.5rem);
 
-    line-height:1;
+    font-weight:700;
+
+    line-height:.95;
+
+    letter-spacing:-3px;
 
     margin-bottom:18px;
 
-    letter-spacing:-2px;
+    color:var(--text);
 
 }
 
