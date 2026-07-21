@@ -317,29 +317,43 @@ nav{
 
     align-items:center;
 
-    padding-top:100px;
+    justify-content:center;
+
+    padding:120px 8% 60px;
 
 }
 
-.hero-content{
+.hero-container{
+
+    max-width:1300px;
+
+    width:100%;
 
     display:grid;
 
-    grid-template-columns:1.2fr 1fr;
+    grid-template-columns:1.1fr .9fr;
 
     align-items:center;
 
-    gap:70px;
+    gap:80px;
 
 }
 
-.hero-text h2{
+.hero-text{
+
+    max-width:620px;
+
+    justify-self:center;
+
+}
+
+.hero-greeting{
 
     color:var(--primary);
 
-    font-size:1.15rem;
+    font-size:1.1rem;
 
-    margin-bottom:10px;
+    margin-bottom:18px;
 
     font-weight:600;
 
@@ -347,37 +361,63 @@ nav{
 
 .hero-text h1{
 
-    font-size:4.3rem;
+    font-size:4.8rem;
 
-    line-height:1.05;
+    line-height:1;
 
-    margin-bottom:20px;
+    margin-bottom:18px;
 
-    font-weight:700;
+    letter-spacing:-2px;
 
 }
 
-.hero-text h3{
+.hero-text h2{
 
-    font-size:1.5rem;
+    font-size:1.6rem;
 
     color:var(--secondary);
-
-    margin-bottom:30px;
 
     font-weight:500;
 
+    margin-bottom:28px;
+
 }
 
-.hero-text p{
+.hero-description{
 
-    max-width:620px;
+    font-size:1.15rem;
+
+    line-height:1.8;
 
     color:var(--secondary);
 
-    margin-bottom:40px;
+    margin-bottom:42px;
 
-    font-size:1.05rem;
+}
+
+.hero-buttons{
+
+    display:flex;
+
+    gap:18px;
+
+}
+
+.hero-image{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.hero-image img{
+
+    width:420px;
+
+    border-radius:50%;
+
+    box-shadow:0 25px 80px rgba(0,0,0,.18);
 
 }
 
