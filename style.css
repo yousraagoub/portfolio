@@ -694,8 +694,8 @@ nav{
 
 .project-image img{
 
-    width:50%;
-    height:260px;
+    width:20%;
+    height:160px;
     object-fit:cover;
     transition:.6s;
 
