@@ -25,48 +25,33 @@ document.addEventListener("DOMContentLoaded", () => {
 
     });
 
-    /* ==========================
-       DARK MODE
-    ========================== */
-
-    const body = document.body;
-
-    const themeToggle = document.querySelector(".theme-toggle");
-
-    const savedTheme = localStorage.getItem("theme");
-
-    if (savedTheme === "dark") {
-
-        body.classList.add("dark");
-
-        if (themeToggle) {
-            themeToggle.innerHTML = "☀️";
-        }
-
-    } else {
-
-        if (themeToggle) {
-            themeToggle.innerHTML = "🌙";
-        }
-
-    }
-
-    themeToggle?.addEventListener("click", () => {
-
-        body.classList.toggle("dark");
-
-        const darkMode = body.classList.contains("dark");
-
-        localStorage.setItem(
-            "theme",
-            darkMode ? "dark" : "light"
-        );
-
-        themeToggle.innerHTML = darkMode
-            ? "☀️"
-            : "🌙";
-
-    });
+   /* ==========================
+      DARK MODE
+   ========================== */
+   
+   const themeToggle = document.getElementById("themeToggle");
+   
+   const currentTheme = localStorage.getItem("theme");
+   
+   if (currentTheme === "dark") {
+       document.body.classList.add("dark");
+       themeToggle.textContent = "☀️";
+   }
+   
+   themeToggle?.addEventListener("click", () => {
+   
+       document.body.classList.toggle("dark");
+   
+       const dark = document.body.classList.contains("dark");
+   
+       localStorage.setItem(
+           "theme",
+           dark ? "dark" : "light"
+       );
+   
+       themeToggle.textContent = dark ? "☀️" : "🌙";
+   
+   });
 
     /* ==========================
        MOBILE MENU
