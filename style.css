@@ -443,6 +443,51 @@ body.dark .navbar{
     box-shadow:0 25px 80px rgba(0,0,0,.18);
 
 }
+.hero-text>*{
+
+    opacity:0;
+
+    transform:translateY(25px);
+
+    animation:fadeUp .8s ease forwards;
+
+}
+
+.hero-text h1{
+
+    animation-delay:.15s;
+
+}
+
+.hero-text h2{
+
+    animation-delay:.3s;
+
+}
+
+.hero-description{
+
+    animation-delay:.45s;
+
+}
+
+.hero-buttons{
+
+    animation-delay:.6s;
+
+}
+
+@keyframes fadeUp{
+
+    to{
+
+        opacity:1;
+
+        transform:none;
+
+    }
+
+}
 
 /* ---------- Buttons ---------- */
 
@@ -450,7 +495,7 @@ body.dark .navbar{
 
     display:flex;
 
-    gap:20px;
+    gap:18px;
 
     flex-wrap:wrap;
 
@@ -458,54 +503,61 @@ body.dark .navbar{
 
 .btn{
 
-    padding:15px 34px;
-
-    border-radius:50px;
-
-    transition:var(--transition);
-
-    font-weight:600;
-
     display:inline-flex;
 
     align-items:center;
 
     justify-content:center;
 
+    padding:15px 30px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    font-size:.98rem;
+
+    transition:all .35s ease;
+
 }
 
 .btn-primary{
 
-    background:var(--primary);
+    background:#0071e3;
 
     color:white;
+
+    box-shadow:0 10px 25px rgba(0,113,227,.18);
 
 }
 
 .btn-primary:hover{
 
-    background:var(--primary-hover);
+    transform:translateY(-4px);
 
-    transform:translateY(-3px);
+    box-shadow:0 18px 35px rgba(0,113,227,.28);
 
 }
 
 .btn-secondary{
 
-    border:1px solid var(--border);
+    background:rgba(255,255,255,.75);
 
-    background:var(--surface);
+    border:1px solid rgba(0,0,0,.08);
+
+    color:var(--text);
+
+    backdrop-filter:blur(12px);
 
 }
 
 .btn-secondary:hover{
 
-    transform:translateY(-3px);
+    transform:translateY(-4px);
 
-    box-shadow:var(--shadow);
+    box-shadow:0 15px 35px rgba(0,0,0,.08);
 
 }
-
 /* ---------- Hero Image ---------- */
 
 .hero-image{
