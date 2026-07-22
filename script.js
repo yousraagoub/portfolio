@@ -526,6 +526,8 @@ Swift • SwiftUI • JavaScript
 `
 );
 
+lucide.createIcons();
+
 /* ==========================
    END
 ========================== */
