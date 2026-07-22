@@ -479,6 +479,31 @@ body.dark .section::after{
 
 }
 
+.image-card{
+
+    position:relative;
+
+}
+
+.image-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:-30px;
+
+    border-radius:50%;
+
+    background:radial-gradient(
+        rgba(0,113,227,.18),
+        transparent 70%
+    );
+
+    z-index:-1;
+
+}
+
 .hero-image img{
 
     width:420px;
@@ -488,6 +513,7 @@ body.dark .section::after{
     box-shadow:0 25px 80px rgba(0,0,0,.18);
 
 }
+
 .hero-text>*{
 
     opacity:0;
