@@ -695,6 +695,12 @@ body.dark .section::after{
     box-shadow:0 15px 35px rgba(0,0,0,.08);
 
 }
+
+.hero-stats{
+
+    grid-template-columns:1fr;
+
+}
 /* ---------- Hero Image ---------- */
 
 .hero-image{
