@@ -141,19 +141,22 @@ button{
 
 section{
 
-    padding:110px 0;
+    padding:140px 8%;
+
+    position:relative;
 
 }
-
 .section-title{
 
-    font-size:2.6rem;
+    font-size:3rem;
 
     font-weight:700;
 
-    text-align:center;
+    letter-spacing:-1.5px;
 
-    margin-bottom:18px;
+    margin-bottom:60px;
+
+    text-align:center;
 
 }
 
@@ -168,6 +171,26 @@ section{
     text-align:center;
 
     margin-bottom:70px;
+
+}
+
+.section::after{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:0;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    width:120px;
+
+    height:1px;
+
+    background:rgba(0,0,0,.08);
 
 }
 
@@ -255,6 +278,12 @@ body.dark .navbar{
 
 }
 
+body.dark .section::after{
+
+    background:rgba(255,255,255,.08);
+
+}
+
 .logo{
 
     font-size:1.3rem;
@@ -335,6 +364,17 @@ body.dark .navbar{
     justify-content:center;
 
     padding:120px 8% 60px;
+
+    background:
+        radial-gradient(circle at 85% 20%,
+        rgba(0,113,227,.10),
+        transparent 35%),
+
+        radial-gradient(circle at 10% 80%,
+        rgba(120,120,255,.08),
+        transparent 30%),
+
+        var(--background);
 
 }
 
