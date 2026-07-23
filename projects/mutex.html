@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mutex — Yousra Abdelrahman</title>
+<meta name="description" content="Mutex: a native iOS app that turns music into real-time, interactive brain-network visualizations. Built with SwiftUI, Combine and AVFoundation.">
+<meta property="og:title" content="Mutex — Yousra Abdelrahman">
+<meta property="og:image" content="../assets/mutex.webp">
+<meta name="theme-color" content="#0071e3">
+
+<link rel="stylesheet" href="../style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<script>
+(function(){
+  try{
+    var t = localStorage.getItem("theme");
+    var dark = t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    if (dark) document.body.classList.add("dark");
+  } catch(e) {}
+})();
+</script>
+
+<div id="progress-bar"></div>
+
+<header>
+<nav class="navbar">
+  <a href="../index.html" class="logo">YA</a>
+
+  <ul class="nav-links">
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#skills">Skills</a></li>
+    <li><a href="../index.html#projects">Projects</a></li>
+    <li><a href="../index.html#education">Education</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">
+      <i data-lucide="moon"></i>
+    </button>
+    <button class="icon-btn menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <i data-lucide="menu"></i>
+    </button>
+  </div>
+</nav>
+</header>
+
+<main>
+
+<section class="case-hero">
+  <div class="section-inner">
+    <a href="../index.html#projects" class="case-back reveal"><i data-lucide="arrow-left"></i> All projects</a>
+
+    <div class="case-eyebrow reveal">
+      <span class="case-badge"><span class="dot"></span> Private development</span>
+      <span class="case-badge">iOS</span>
+    </div>
+
+    <h1 class="reveal">Mutex</h1>
+    <p class="case-tagline reveal">
+      Turning music into a living, interactive brain-network — a native iOS app that visualizes sound in real time.
+    </p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="device-frame mobile-frame reveal">
+    <div class="notch"></div>
+    <div class="device-screen">
+      <img src="../assets/mutex.webp" alt="Mutex app interface showing a real-time audio-reactive network visualization" loading="lazy" width="1800" height="810">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="glance-grid">
+    <div class="glance-item reveal"><h4>Role</h4><p>Solo iOS Developer</p></div>
+    <div class="glance-item reveal"><h4>Platform</h4><p>iOS</p></div>
+    <div class="glance-item reveal"><h4>Status</h4><p>Private development</p></div>
+    <div class="glance-item reveal"><h4>Stack</h4><p>SwiftUI · Combine</p></div>
+  </div>
+
+  <div class="case-body">
+    <h2 class="reveal">Overview</h2>
+    <p class="reveal">
+      Mutex explores what music could look like if you could see it think. As a track plays, the app analyzes the audio in real time and maps it onto an interactive, brain-network-style visualization — nodes pulse, connect, and reorganize in sync with the sound, turning listening into something you can watch unfold.
+    </p>
+
+    <h2 class="reveal">How it's built</h2>
+    <ul class="reveal">
+      <li><strong>AVFoundation</strong> handles real-time audio capture and analysis, feeding frequency and amplitude data into the visualization layer as the track plays.</li>
+      <li><strong>Accelerate / vDSP</strong> does the heavy lifting on the signal-processing side, keeping that analysis fast enough to stay in sync with playback.</li>
+      <li><strong>Combine</strong> pipes the processed audio data through a reactive stream, so the interface updates smoothly without blocking the UI thread.</li>
+      <li><strong>MVVM</strong> keeps the visualization logic testable and separate from the SwiftUI views, which focus purely on rendering.</li>
+      <li><strong>SwiftUI</strong> drives the interactive network canvas, with custom animations tied directly to the incoming audio signal.</li>
+    </ul>
+
+    <h2 class="reveal">Focus areas</h2>
+    <p class="reveal">
+      The core challenge was performance: keeping the visualization fluid while continuously processing audio, without introducing lag between what's heard and what's seen. Accessibility was built in rather than bolted on — VoiceOver support and refined navigation mean the app holds up beyond sighted use, not just as a visual showpiece.
+    </p>
+  </div>
+</section>
+
+<div class="case-cta reveal">
+  <h3>Currently in private development</h3>
+  <p>A public build and demo video are on the way. In the meantime, feel free to reach out for a walkthrough.</p>
+  <div class="hero-buttons">
+    <a href="../index.html#contact" class="btn btn-primary">Get in touch</a>
+  </div>
+</div>
+
+<div class="case-nav-split reveal">
+  <a href="scene.html" class="btn btn-secondary">Next project: Scene →</a>
+</div>
+
+</main>
+
+<footer>
+  <p>© <span class="current-year">2026</span> Yousra Abdelrahman. Designed with simplicity and crafted for Apple platforms.</p>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">
+  <i data-lucide="arrow-up"></i>
+</button>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="../script.js"></script>
+
+</body>
+</html>
