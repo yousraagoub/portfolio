@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Scene — Yousra Abdelrahman</title>
+<meta name="description" content="Scene: a collaborative macOS app that helps Saudi writers generate and organize AI-assisted screenplays. Built with SwiftUI and CloudKit.">
+<meta property="og:title" content="Scene — Yousra Abdelrahman">
+<meta property="og:image" content="../assets/scene.webp">
+<meta name="theme-color" content="#0071e3">
+
+<link rel="stylesheet" href="../style.css">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<script>
+(function(){
+  try{
+    var t = localStorage.getItem("theme");
+    var dark = t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    if (dark) document.body.classList.add("dark");
+  } catch(e) {}
+})();
+</script>
+
+<div id="progress-bar"></div>
+
+<header>
+<nav class="navbar">
+  <a href="../index.html" class="logo">YA</a>
+
+  <ul class="nav-links">
+    <li><a href="../index.html#about">About</a></li>
+    <li><a href="../index.html#skills">Skills</a></li>
+    <li><a href="../index.html#projects">Projects</a></li>
+    <li><a href="../index.html#education">Education</a></li>
+    <li><a href="../index.html#contact">Contact</a></li>
+  </ul>
+
+  <div class="nav-actions">
+    <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">
+      <i data-lucide="moon"></i>
+    </button>
+    <button class="icon-btn menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <i data-lucide="menu"></i>
+    </button>
+  </div>
+</nav>
+</header>
+
+<main>
+
+<section class="case-hero">
+  <div class="section-inner">
+    <a href="../index.html#projects" class="case-back reveal"><i data-lucide="arrow-left"></i> All projects</a>
+
+    <div class="case-eyebrow reveal">
+      <span class="case-badge"><span class="dot"></span> Private development</span>
+      <span class="case-badge">macOS</span>
+    </div>
+
+    <h1 class="reveal">Scene</h1>
+    <p class="case-tagline reveal">
+      A collaborative macOS writing studio that helps Saudi writers generate and organize AI-assisted screenplays.
+    </p>
+  </div>
+</section>
+
+<section style="padding-top:0;">
+  <div class="device-frame reveal">
+    <div class="device-chrome"><span></span><span></span><span></span></div>
+    <div class="device-screen">
+      <img src="../assets/scene.webp" alt="Scene app interface showing an AI-assisted screenplay workspace" loading="lazy" width="1800" height="810">
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="glance-grid">
+    <div class="glance-item reveal"><h4>Role</h4><p>UI & Integration Developer</p></div>
+    <div class="glance-item reveal"><h4>Team</h4><p>Multidisciplinary team</p></div>
+    <div class="glance-item reveal"><h4>Status</h4><p>Private development</p></div>
+    <div class="glance-item reveal"><h4>Stack</h4><p>SwiftUI · CloudKit</p></div>
+  </div>
+
+  <div class="case-body">
+    <h2 class="reveal">Overview</h2>
+    <p class="reveal">
+      Screenwriting is collaborative by nature, but most tools treat it as a solitary word processor. Scene is a native macOS app built for Saudi writers that pairs a distraction-free screenplay editor with AI-assisted generation, so writers can draft, restructure, and refine scenes without losing their formatting or their flow. I worked on this as part of a multidisciplinary team, focused on the interface and on wiring it up to the AI and data layers underneath.
+    </p>
+
+    <h2 class="reveal">My contribution</h2>
+    <ul class="reveal">
+      <li>Built the app's <strong>SwiftUI</strong> interface, designed around standard screenplay formatting conventions.</li>
+      <li>Connected AI-generated content to the frontend using <strong>Combine</strong> and an <strong>MVVM</strong> architecture, so suggestions flow into the editor as reactive state rather than one-off insertions.</li>
+      <li>Integrated the UI layer with a <strong>CloudKit</strong>-backed data layer built by the team, wiring up sync and shared access for co-writers.</li>
+    </ul>
+
+    <h2 class="reveal">Focus areas</h2>
+    <p class="reveal">
+      Working across a multidisciplinary team meant designing the UI to stay in sync with a data layer and AI pipeline that other teammates were actively building — which meant leaning on Combine and clear MVVM boundaries to keep the interface predictable as those pieces evolved underneath it.
+    </p>
+  </div>
+</section>
+
+<div class="case-cta reveal">
+  <h3>Currently in private development</h3>
+  <p>A public build and demo video are on the way. In the meantime, feel free to reach out for a walkthrough.</p>
+  <div class="hero-buttons">
+    <a href="../index.html#contact" class="btn btn-primary">Get in touch</a>
+  </div>
+</div>
+
+<div class="case-nav-split reveal">
+  <a href="mutex.html" class="btn btn-secondary">← Previous project: Mutex</a>
+</div>
+
+</main>
+
+<footer>
+  <p>© <span class="current-year">2026</span> Yousra Abdelrahman. Designed with simplicity and crafted for Apple platforms.</p>
+</footer>
+
+<button class="back-to-top" aria-label="Back to top">
+  <i data-lucide="arrow-up"></i>
+</button>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="../script.js"></script>
+
+</body>
+</html>
