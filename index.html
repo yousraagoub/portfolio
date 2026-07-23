@@ -1,620 +1,281 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Yousra Ali | Software Developer | iOS Developer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Portfolio of Yousra Ali, Apple Developer Academy graduate specializing in Swift, SwiftUI, iOS and macOS development.">
+<title>Yousra Abdelrahman | iOS & Software Developer</title>
 
-    <meta name="keywords" content="iOS Developer, Swift, SwiftUI, Apple Developer Academy, Portfolio">
+<meta name="description" content="Portfolio of Yousra Abdelrahman, Apple Developer Academy graduate specializing in Swift, SwiftUI, iOS and macOS development.">
+<meta name="keywords" content="iOS Developer, Swift, SwiftUI, Apple Developer Academy, Portfolio">
 
-    <meta property="og:title" content="Yousra Ali | iOS Developer">
-    <meta property="og:description" content="Software Developer & Apple Developer Academy Graduate">
-    <meta property="og:type" content="website">
+<meta property="og:title" content="Yousra Abdelrahman | iOS & Software Developer">
+<meta property="og:description" content="Apple Developer Academy graduate building native iOS and macOS apps with Swift and SwiftUI.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/profile.jpg">
+<meta name="theme-color" content="#0071e3">
 
-    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <script src="https://unpkg.com/lucide@latest"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Yousra Abdelrahman",
+  "jobTitle": "iOS & Software Developer",
+  "description": "Apple Developer Academy graduate specializing in Swift, SwiftUI, iOS and macOS development.",
+  "email": "mailto:yousraagoub@gmail.com",
+  "sameAs": ["https://linkedin.com/in/yousra-a-5026151b5"],
+  "address": { "@type": "PostalAddress", "addressLocality": "Riyadh", "addressCountry": "SA" }
+}
+</script>
 </head>
 
 <body>
 
+<script>
+(function(){
+  try{
+    var t = localStorage.getItem("theme");
+    var dark = t === "dark" || (!t && window.matchMedia("(prefers-color-scheme: dark)").matches);
+    if (dark) document.body.classList.add("dark");
+  } catch(e) {}
+})();
+</script>
+
 <div id="progress-bar"></div>
 
 <header>
-
 <nav class="navbar">
+  <a href="#" class="logo">YA</a>
 
-<div class="logo">
-YA
-</div>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
 
-<ul class="nav-links">
-
-<li><a href="#about">About</a></li>
-
-<li><a href="#skills">Skills</a></li>
-
-<li><a href="#projects">Projects</a></li>
-
-<li><a href="#education">Education</a></li>
-
-<li><a href="#contact">Contact</a></li>
-
-</ul>
-
-<div class="nav-actions">
-
-<button id="themeToggle" aria-label="Toggle theme">
-    <i data-lucide="moon"></i>
-</button>
-
-</div>
-
+  <div class="nav-actions">
+    <button id="themeToggle" class="icon-btn" aria-label="Toggle dark mode">
+      <i data-lucide="moon"></i>
+    </button>
+    <button class="icon-btn menu-btn" aria-label="Toggle menu" aria-expanded="false">
+      <i data-lucide="menu"></i>
+    </button>
+  </div>
 </nav>
-
 </header>
 
+<main>
+
 <!-- HERO -->
-
 <section class="hero">
-
-<div class="hero-container">
-
-<div class="hero-text">
-
-<p class="hero-greeting">
-Hello, I'm
-</p>
-
-<h1>
-Yousra Ali
-</h1>
-
-<h2 class="typing">
-Software Developer
-</h2>
-
-<p class="hero-description">
-
-Apple Developer Academy graduate creating elegant native iOS and macOS experiences with Swift, SwiftUI, and modern Apple frameworks.
-
-</p>
-
-<div class="hero-buttons">
-
-    <a href="#projects" class="btn btn-primary">
-        View Projects
-    </a>
-
-    <a href="assets/Yousra_Ali_CV.pdf"
-       class="btn btn-secondary"
-       download>
-        Download CV
-    </a>
-
-</div>
-
-</div>
-
-<div class="hero-image">
-
-<div class="image-card">
-
-<img
-src="assets/profile.jpg"
-alt="Yousra Ali">
-
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="hero-stats">
-
-    <div class="stat-card">
-
-        <div class="stat-icon">🎓</div>
-
-        <h3>Apple Developer Academy</h3>
-
-        <p>Graduate</p>
-
+  <div class="hero-container">
+    <div class="hero-text">
+      <h1>Yousra Abdelrahman</h1>
+      <h2><span class="typing">Software Developer</span></h2>
+      <p class="hero-description">
+        Apple Developer Academy graduate creating elegant native iOS and macOS experiences with Swift, SwiftUI, and modern Apple frameworks.
+      </p>
+      <div class="hero-buttons">
+        <a href="assets/Yousra_Abdelrahman_CV.pdf" class="btn btn-primary" download>Download CV</a>
+      </div>
     </div>
 
-    <div class="stat-card">
-
-        <div class="stat-icon">📱</div>
-
-        <h3>Native iOS & macOS</h3>
-
-        <p>Swift • SwiftUI</p>
-
+    <div class="hero-image">
+      <div class="image-card">
+        <img src="assets/profile.jpg" alt="Portrait of Yousra Abdelrahman" width="320" height="320">
+      </div>
     </div>
-
-    <div class="stat-card">
-
-        <div class="stat-icon">🏆</div>
-
-        <h3>First Class Honours</h3>
-
-        <p>B.Sc. Information Technology</p>
-
-    </div>
-
+  </div>
 </section>
 
 <!-- ABOUT -->
+<section id="about">
+  <div class="section-title reveal">About Me</div>
 
-<section id="about" class="section">
-
-    <div class="section-title">
-        About Me
+  <div class="about-layout">
+    <div class="about-text reveal">
+      <h3>Building thoughtful experiences for Apple platforms.</h3>
+      <p>
+        I'm a Software Developer with a passion for building intuitive, accessible, and high-performance applications using Swift and SwiftUI.
+      </p>
+      <p>
+        I enjoy turning ideas into polished products, whether working independently or as part of a collaborative team. My focus is writing clean code, creating elegant interfaces, and delivering seamless user experiences.
+      </p>
     </div>
 
-    <div class="about-layout">
-
-        <div class="about-text">
-
-            <h3>Building thoughtful experiences for Apple platforms.</h3>
-
-            <p>
-                I'm a Software Developer and Apple Developer Academy graduate with a passion for building intuitive, accessible, and high-performance applications using Swift and SwiftUI.
-            </p>
-
-            <p>
-                I enjoy turning ideas into polished products, whether working independently or as part of a collaborative team. My focus is writing clean code, creating elegant interfaces, and delivering seamless user experiences.
-            </p>
-
-        </div>
-
-        <div class="about-highlights">
-
-            <div class="highlight-card">
-                <h4>🎓 Education</h4>
-                <p>Apple Developer Academy Graduate</p>
-            </div>
-
-            <div class="highlight-card">
-                <h4>📱 Platforms</h4>
-                <p>iOS & macOS Development</p>
-            </div>
-
-            <div class="highlight-card">
-                <h4>⚙️ Expertise</h4>
-                <p>Swift • SwiftUI • MVVM</p>
-            </div>
-
-            <div class="highlight-card">
-                <h4>📍 Location</h4>
-                <p>Riyadh, Saudi Arabia</p>
-            </div>
-
-        </div>
-
+    <div class="about-highlights">
+      <div class="highlight-card"><h4>📱 Platforms</h4><p>iOS & macOS Development</p></div>
+      <div class="highlight-card"><h4>⚙️ Expertise</h4><p>Swift • SwiftUI • MVVM</p></div>
+      <div class="highlight-card"><h4>🏆 Distinction</h4><p>First Class Honours, B.Sc. IT</p></div>
+      <div class="highlight-card"><h4>📍 Location</h4><p>Riyadh, Saudi Arabia</p></div>
     </div>
-
+  </div>
 </section>
+
 <!-- SKILLS -->
+<section id="skills">
+  <div class="section-title reveal">Technical Skills</div>
 
-<section id="skills" class="section">
-
-<div class="section-title">
-
-Technical Skills
-
-</div>
-
-<div class="skills-grid">
-
-<div class="skill-card">
-
-<h3>Languages</h3>
-
-<ul>
-
-<li>Swift</li>
-
-<li>JavaScript</li>
-
-<li>Python</li>
-
-</ul>
-
-</div>
-
-<div class="skill-card">
-
-<h3>Apple Development</h3>
-
-<ul>
-
-<li>SwiftUI</li>
-
-<li>MVVM</li>
-
-<li>Combine</li>
-
-<li>AVFoundation</li>
-
-<li>CloudKit</li>
-
-<li>Core Data</li>
-
-<li>SwiftData</li>
-
-</ul>
-
-</div>
-
-<div class="skill-card">
-
-<h3>Networking</h3>
-
-<ul>
-
-<li>REST APIs</li>
-
-<li>URLSession</li>
-
-<li>UserDefaults</li>
-
-</ul>
-
-</div>
-
-<div class="skill-card">
-
-<h3>Tools</h3>
-
-<ul>
-
-<li>Xcode</li>
-
-<li>Git</li>
-
-<li>GitHub</li>
-
-<li>HTML</li>
-
-<li>CSS</li>
-
-<li>React</li>
-
-</ul>
-
-</div>
-
-</div>
-
+  <div class="skills-grid">
+    <div class="skill-card reveal">
+      <h3>Languages</h3>
+      <ul>
+        <li><img class="skill-logo" src="https://cdn.simpleicons.org/swift/6e6e73" alt="" loading="lazy">Swift</li>
+        <li><img class="skill-logo" src="https://cdn.simpleicons.org/javascript/6e6e73" alt="" loading="lazy">JavaScript</li>
+        <li><img class="skill-logo" src="https://cdn.simpleicons.org/python/6e6e73" alt="" loading="lazy">Python</li>
+      </ul>
+    </div>
+    <div class="skill-card reveal">
+      <h3>iOS & macOS Development</h3>
+      <ul><li>SwiftUI</li><li>MVVM</li><li>Combine</li><li>AVFoundation</li><li>URLSession</li><li>REST APIs</li><li>CloudKit</li><li>Core Data</li><li>SwiftData</li><li>UserDefaults</li></ul>
+    </div>
+    <div class="skill-card reveal">
+      <h3>Web</h3>
+      <ul>
+        <li><img class="skill-logo" src="https://cdn.simpleicons.org/html5/6e6e73" alt="" loading="lazy">HTML</li>
+        <li><img class="skill-logo" src="https://cdn.simpleicons.org/css3/6e6e73" alt="" loading="lazy">CSS</li>
+        <li><img class="skill-logo" src="https://cdn.simpleicons.org/react/6e6e73" alt="" loading="lazy">React</li>
+      </ul>
+    </div>
+    <div class="skill-card reveal">
+      <h3>Tools</h3>
+      <ul>
+        <li><img class="skill-logo" src="https://cdn.simpleicons.org/xcode/6e6e73" alt="" loading="lazy">Xcode</li>
+        <li><img class="skill-logo" src="https://cdn.simpleicons.org/git/6e6e73" alt="" loading="lazy">Git</li>
+        <li><img class="skill-logo" src="https://cdn.simpleicons.org/github/6e6e73" alt="" loading="lazy">GitHub</li>
+      </ul>
+    </div>
+  </div>
 </section>
 
 <!-- PROJECTS -->
+<section id="projects">
+  <div class="section-title reveal">Featured Projects</div>
 
-<section id="projects" class="section">
+  <div class="projects-grid">
 
-<div class="section-title">
+    <a href="projects/mutex.html" class="project-card reveal">
+      <div class="project-thumb"><img src="assets/mutex.webp" alt="Mutex app screenshot" loading="lazy" width="1800" height="810"></div>
+      <div class="project-content">
+        <h3>Mutex</h3>
+        <p>A native iOS application that transforms music into interactive brain-network visualizations through real-time audio analysis, delivering an immersive and accessible listening experience.</p>
+        <div class="tags">
+          <span>SwiftUI</span><span>MVVM</span><span>Combine</span><span>AVFoundation</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-status"><span class="dot"></span> Private development</span>
+          <span class="project-link">View case study <i data-lucide="arrow-right"></i></span>
+        </div>
+      </div>
+    </a>
 
-Featured Projects
+    <a href="projects/scene.html" class="project-card reveal">
+      <div class="project-thumb"><img src="assets/scene.webp" alt="Scene app screenshot" loading="lazy" width="1800" height="810"></div>
+      <div class="project-content">
+        <h3>Scene</h3>
+        <p>A collaborative macOS application that helps Saudi writers generate and organize AI-assisted screenplays with a seamless SwiftUI interface and CloudKit integration.</p>
+        <div class="tags">
+          <span>SwiftUI</span><span>CloudKit</span><span>AI</span><span>macOS</span>
+        </div>
+        <div class="project-footer">
+          <span class="project-status"><span class="dot"></span> Private development</span>
+          <span class="project-link">View case study <i data-lucide="arrow-right"></i></span>
+        </div>
+      </div>
+    </a>
 
-</div>
-
-<div class="projects-grid">
-
-<article class="project-card">
-
-<img
-src="assets/mutex.png"
-alt="Mutex App">
-
-<div class="project-content">
-
-<h3>
-Mutex
-</h3>
-
-<p>
-
-A native iOS application that transforms music into interactive brain-network visualizations through real-time audio analysis, delivering an immersive and accessible listening experience.
-
-</p>
-
-<div class="tags">
-
-<span>SwiftUI</span>
-
-<span>MVVM</span>
-
-<span>Combine</span>
-
-<span>AVFoundation</span>
-
-</div>
-
-<a href="#" class="project-link">
-
-<span class="project-status">
-
-Currently in private development
-
-</span>
-
-</a>
-
-</div>
-
-</article>
-
-<article class="project-card">
-
-<img
-src="assets/scene.png"
-alt="Scene App">
-
-<div class="project-content">
-
-<h3>
-Scene
-</h3>
-
-<p>
-
-A collaborative macOS application that helps Saudi writers generate and organize AI-assisted screenplays with a seamless SwiftUI interface and CloudKit integration.
-
-</p>
-
-<div class="tags">
-
-<span>SwiftUI</span>
-
-<span>CloudKit</span>
-
-<span>AI</span>
-
-<span>macOS</span>
-
-</div>
-
-<a href="#" class="project-link">
-
-<span class="project-status">
-
-Currently in private development
-
-</span>
-
-</a>
-
-</div>
-
-</article>
-
-</div>
-
+  </div>
 </section>
 
 <!-- EDUCATION -->
+<section id="education">
+  <div class="section-title reveal">Education</div>
 
-<section id="education" class="section">
-
-<div class="section-title">
-
-Education
-
-</div>
-
-<div class="timeline">
-
-<div class="timeline-item">
-
-<h3>
-
-Apple Developer Academy
-
-</h3>
-
-<p>
-
-TUWAIQ
-
-</p>
-
-<span>
-
-iOS Developer Program
-
-</span>
-
-</div>
-
-<div class="timeline-item">
-
-<h3>
-
-Sudan University of Science and Technology
-
-</h3>
-
-<p>
-
-Bachelor of Information Technology
-
-</p>
-
-<span>
-
-First Class Honours
-
-</span>
-
-</div>
-
-</div>
-
+  <div class="timeline">
+    <div class="timeline-item reveal">
+      <h3>Apple Developer Academy</h3>
+      <p>TUWAIQ</p>
+      <span>iOS Developer Program</span>
+    </div>
+    <div class="timeline-item reveal">
+      <h3>Sudan University of Science and Technology</h3>
+      <p>Bachelor of Information Technology</p>
+      <span>First Class Honours</span>
+    </div>
+  </div>
 </section>
 
-<!-- PROFESSIONAL DEVELOPMENT -->
+<!-- BEYOND THE CODE (Professional Development + Volunteering, merged) -->
+<section id="beyond">
+  <div class="section-title reveal">Beyond the Code</div>
 
-<section class="section">
+  <div class="beyond-grid">
+    <div class="beyond-card reveal">
+      <div class="beyond-icon"><i data-lucide="briefcase-business"></i></div>
+      <h3>McKinsey Forward Program</h3>
+      <p class="beyond-org">Professional Development</p>
+      <p>Focused on structured problem solving, communication, collaboration, adaptability and digital productivity.</p>
+    </div>
 
-<div class="section-title">
-
-Professional Development
-
-</div>
-
-<div class="card">
-
-<h3>
-
-McKinsey Forward Program
-
-</h3>
-
-<p>
-
-Focused on structured problem solving, communication, collaboration, adaptability and digital productivity.
-
-</p>
-
-</div>
-
-</section>
-
-<!-- VOLUNTEERING -->
-
-<section class="section">
-
-<div class="section-title">
-
-Volunteer Experience
-
-</div>
-
-<div class="card">
-
-<h3>
-
-IEEE SUSTech Student Branch
-
-</h3>
-
-<p>
-
-Technical Support Volunteer
-
-</p>
-
-<p>
-
-Recognized as Volunteer of the Month during both months of service.
-
-</p>
-
-</div>
-
+    <div class="beyond-card reveal">
+      <div class="beyond-icon"><i data-lucide="heart-handshake"></i></div>
+      <h3>IEEE SUSTech Student Branch</h3>
+      <p class="beyond-org">Volunteer Experience</p>
+      <p>Technical Support Volunteer, recognized as Volunteer of the Month during both months of service.</p>
+    </div>
+  </div>
 </section>
 
 <!-- CONTACT -->
+<section id="contact">
+  <div class="section-title reveal">Let's Connect</div>
+  <p class="contact-intro reveal">
+    I'm always happy to connect about iOS development, Apple technologies, or exciting opportunities.
+  </p>
 
-<section id="contact" class="section">
+  <div class="contact-grid">
+    <a class="contact-card reveal" href="mailto:yousraagoub@gmail.com">
+      <span class="icon-wrap"><i data-lucide="mail"></i></span>
+      <div><h3>Email</h3><p>yousraagoub@gmail.com</p></div>
+    </a>
 
-    <div class="section-title">
-        Let's Connect
+    <a class="contact-card reveal" href="tel:+966556909479">
+      <span class="icon-wrap"><i data-lucide="phone"></i></span>
+      <div><h3>Phone</h3><p>+966 55 690 9479</p></div>
+    </a>
+
+    <a class="contact-card reveal" href="https://linkedin.com/in/yousra-a-5026151b5" target="_blank" rel="noopener">
+      <span class="icon-wrap"><i data-lucide="linkedin"></i></span>
+      <div><h3>LinkedIn</h3><p>View Profile</p></div>
+    </a>
+
+    <div class="contact-card reveal">
+      <span class="icon-wrap"><i data-lucide="map-pin"></i></span>
+      <div><h3>Location</h3><p>Riyadh, Saudi Arabia</p></div>
     </div>
-
-    <p class="contact-intro">
-        I'm always happy to connect about iOS development,
-        Apple technologies, or exciting opportunities.
-    </p>
-
-    <div class="contact-grid">
-
-        <a class="contact-card"
-           href="mailto:yousraagoub@gmail.com">
-
-            <i class="icon-mail"></i>
-
-            <div>
-
-                <h3>Email</h3>
-
-                <p>yousraagoub@gmail.com</p>
-
-            </div>
-
-        </a>
-
-        <a class="contact-card"
-           href="tel:+966556909479">
-
-            <i class="icon-phone"></i>
-
-            <div>
-
-                <h3>Phone</h3>
-
-                <p>+966 55 690 9479</p>
-
-            </div>
-
-        </a>
-
-        <a class="contact-card"
-           href="https://linkedin.com/in/yousra-a-5026151b5"
-           target="_blank">
-
-            <i class="icon-linkedin"></i>
-
-            <div>
-
-                <h3>LinkedIn</h3>
-
-                <p>View Profile</p>
-
-            </div>
-
-        </a>
-
-        <div class="contact-card">
-
-            <i class="icon-map-pin"></i>
-
-            <div>
-
-                <h3>Location</h3>
-
-                <p>Riyadh, Saudi Arabia</p>
-
-            </div>
-
-        </div>
-
-    </div>
-
+  </div>
 </section>
 
+</main>
+
 <footer>
-
-<p>
-
-© 2026 Yousra Ali. Designed with simplicity and crafted for Apple platforms.
-
-</p>
-
+  <p>© <span class="current-year">2026</span> Yousra Abdelrahman. Designed with simplicity and crafted for Apple platforms.</p>
 </footer>
 
+<button class="back-to-top" aria-label="Back to top">
+  <i data-lucide="arrow-up"></i>
+</button>
+
+<script src="https://unpkg.com/lucide@latest"></script>
 <script src="script.js"></script>
 
 </body>
