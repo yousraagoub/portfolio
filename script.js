@@ -42,15 +42,25 @@ document.addEventListener("DOMContentLoaded", () => {
     menuButton?.setAttribute("aria-expanded", "false");
   }
 
-  menuButton?.addEventListener("click", () => {
-    const isOpen = navLinks?.classList.toggle("active");
-    if (menuIcon) {
-      menuIcon.setAttribute("data-lucide", isOpen ? "x" : "menu");
-      if (window.lucide) lucide.createIcons();
-    }
-    menuButton.setAttribute("aria-expanded", String(!!isOpen));
-  });
+  // menuButton?.addEventListener("click", () => {
+  //   const isOpen = navLinks?.classList.toggle("active");
+  //   if (menuIcon) {
+  //     menuIcon.setAttribute("data-lucide", isOpen ? "x" : "menu");
+  //     if (window.lucide) lucide.createIcons();
+  //   }
+  //   menuButton.setAttribute("aria-expanded", String(!!isOpen));
+  // });
 
+   menuButton?.addEventListener("click", () => {
+       const isOpen = navLinks.classList.toggle("active");
+   
+       const icon = menuButton.querySelector("[data-lucide]");
+       icon.setAttribute("data-lucide", isOpen ? "x" : "menu");
+   
+       lucide.createIcons();
+   
+       menuButton.setAttribute("aria-expanded", isOpen);
+  });
   document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", closeMenu);
   });
