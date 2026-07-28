@@ -765,7 +765,7 @@ footer p{color:var(--text-secondary);font-size:.88rem;}
   grid-template-columns:1fr;
   gap:28px;
 }
-@media (min-width:440px){
+@media (min-width:640px){
   .showcase-grid.phones{grid-template-columns:repeat(4,1fr);gap:20px;}
 }
 
