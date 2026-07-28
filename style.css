@@ -777,7 +777,7 @@ footer p{color:var(--text-secondary);font-size:.88rem;}
   box-shadow:var(--shadow-sm);
 }
 .showcase-item img{
-  width:60%;
+  width:100%;
   aspect-ratio: 9 / 16;      /* pick whatever ratio you want, e.g. 4/3, 16/10 */
   object-fit: cover;         /* crops to fill instead of stretching */
   border-radius:var(--r-md);
