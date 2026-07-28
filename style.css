@@ -778,6 +778,7 @@ footer p{color:var(--text-secondary);font-size:.88rem;}
 }
 .showcase-item img{
   width:100%;
+  aspect-ratio: 9 / 16;
   border-radius:var(--r-md);
   display:block;
   margin-bottom:14px;
