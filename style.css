@@ -776,13 +776,20 @@ footer p{color:var(--text-secondary);font-size:.88rem;}
   padding:18px 18px 20px;
   box-shadow:var(--shadow-sm);
 }
-.showcase-item img{
+/* .showcase-item img{
   width:100%;
-  aspect-ratio: 9 / 16;      /* pick whatever ratio you want, e.g. 4/3, 16/10 */
-  object-fit: cover;         /* crops to fill instead of stretching */
+  aspect-ratio: 9 / 16;      
+  object-fit: cover;         
   border-radius:var(--r-md);
   display:block;
   margin-bottom:14px;
+} */
+.showcase-item img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:var(--r-md);
+    margin-bottom:14px;
 }
 .showcase-item figcaption{
   color:var(--text-secondary);
