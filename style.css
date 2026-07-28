@@ -369,9 +369,9 @@ header.scrolled .navbar{box-shadow:var(--shadow-md);}
   justify-content:center;
 }
 
-.hero-image{display:flex;justify-content:center;}
+.hero-image{display:flex;justify-content:center;align-items:center;}
 
-.image-card{position:relative;}
+.image-card{position:relative;width:clamp(200px,45vw,320px);}
 .image-card::before{
   content:"";
   position:absolute;
@@ -382,8 +382,10 @@ header.scrolled .navbar{box-shadow:var(--shadow-md);}
 }
 
 .hero-image img{
+  display:block;
   width:clamp(200px,45vw,320px);
-  aspect-ratio:1;
+  height:clamp(200px,45vw,320px);
+  flex-shrink:0;
   object-fit:cover;
   border-radius:50%;
   border:6px solid var(--surface);
@@ -459,7 +461,18 @@ header.scrolled .navbar{box-shadow:var(--shadow-md);}
   border:1px solid var(--border);
   box-shadow:var(--shadow-sm);
 }
-.skill-card h3{font-size:1.05rem;margin-bottom:18px;}
+.skill-card h3{
+  font-size:1.05rem;
+  margin-bottom:18px;
+  display:flex;
+  align-items:center;
+  gap:9px;
+}
+.skill-card h3 svg{
+  width:19px;height:19px;
+  color:var(--accent);
+  flex-shrink:0;
+}
 .skill-card ul{display:flex;flex-wrap:wrap;gap:8px;}
 .skill-card li{
   display:inline-flex;
@@ -661,7 +674,8 @@ body.dark .beyond-icon{background:rgba(41,151,255,.16);}
   display:flex;align-items:center;justify-content:center;
 }
 body.dark .contact-card .icon-wrap{background:rgba(41,151,255,.16);}
-.contact-card .icon-wrap svg{width:19px;height:19px;}
+.contact-card .icon-wrap svg,
+.contact-card .icon-wrap img{width:19px;height:19px;}
 .contact-card h3{font-size:.95rem;font-weight:600;margin-bottom:2px;}
 .contact-card p{color:var(--text-secondary);font-size:.9rem;word-break:break-word;}
 
@@ -743,49 +757,63 @@ footer p{color:var(--text-secondary);font-size:.88rem;}
   margin-bottom:30px;
 }
 
-/* device frame — signature element */
-.device-frame{
-  border-radius:28px;
-  padding:14px;
-  background:linear-gradient(160deg,#3a3a3c,#1c1c1e 60%);
-  box-shadow:var(--shadow-lg);
-  max-width:960px;
+/* showcase gallery — real app/product screenshots (already framed by device mockups) */
+.showcase-grid{
+  width:min(var(--max),92%);
+  margin-inline:auto;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:28px;
+}
+@media (min-width:640px){
+  .showcase-grid.phones{grid-template-columns:repeat(2,1fr);gap:32px;}
+}
+
+.showcase-item{
+  background:var(--surface);
+  border:1px solid var(--border);
+  border-radius:var(--r-lg);
+  padding:18px 18px 20px;
+  box-shadow:var(--shadow-sm);
+}
+.showcase-item img{
+  width:100%;
+  border-radius:var(--r-md);
+  display:block;
+  margin-bottom:14px;
+}
+.showcase-item figcaption{
+  color:var(--text-secondary);
+  font-size:.92rem;
+  line-height:1.6;
+  text-align:center;
+}
+
+/* demo video, composited inside a real phone-frame screenshot */
+.phone-demo-frame{
+  position:relative;
+  width:min(300px,72vw);
+  aspect-ratio:760/1530;
   margin-inline:auto;
 }
-body.dark .device-frame{background:linear-gradient(160deg,#48484a,#0a0a0b 60%);}
-
-.device-frame .device-chrome{
-  display:flex;
-  align-items:center;
-  gap:7px;
-  padding:0 6px 12px;
-}
-.device-frame .device-chrome span{
-  width:10px;height:10px;border-radius:50%;
-}
-.device-frame .device-chrome span:nth-child(1){background:#ff5f57;}
-.device-frame .device-chrome span:nth-child(2){background:#febc2e;}
-.device-frame .device-chrome span:nth-child(3){background:#28c840;}
-
-.device-frame.mobile-frame{
-  max-width:340px;
-  border-radius:44px;
-  padding:16px 12px;
-}
-.device-frame.mobile-frame .notch{
-  width:90px;height:22px;
-  background:#000;
-  border-radius:0 0 16px 16px;
-  margin:0 auto 10px;
-}
-
-.device-screen{
-  border-radius:14px;
-  overflow:hidden;
+.phone-demo-frame video{
+  position:absolute;
+  left:6.7%;
+  top:3.3%;
+  width:86.6%;
+  height:93.4%;
+  object-fit:cover;
+  border-radius:34px;
   background:#000;
 }
-.device-frame.mobile-frame .device-screen{border-radius:26px;}
-.device-screen img{width:100%;display:block;}
+.phone-demo-frame img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  z-index:2;
+}
 
 /* at-a-glance */
 .glance-grid{
