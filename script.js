@@ -33,14 +33,18 @@ document.addEventListener("DOMContentLoaded", () => {
   const navLinks = document.querySelector(".nav-links");
   const menuIcon = menuButton?.querySelector("[data-lucide]");
 
-  function closeMenu() {
-    navLinks?.classList.remove("active");
-    if (menuIcon) {
-      menuIcon.setAttribute("data-lucide", "menu");
-      if (window.lucide) lucide.createIcons();
-    }
-    menuButton?.setAttribute("aria-expanded", "false");
-  }
+  // function closeMenu() {
+  //   navLinks?.classList.remove("active");
+  //   if (menuIcon) {
+  //     menuIcon.setAttribute("data-lucide", "menu");
+  //     if (window.lucide) lucide.createIcons();
+  //   }
+  //   menuButton?.setAttribute("aria-expanded", "false");
+  // }
+   function closeMenu() {
+    navLinks.classList.remove("active");
+    menuButton.setAttribute("aria-expanded", "false");
+   }
 
   // menuButton?.addEventListener("click", () => {
   //   const isOpen = navLinks?.classList.toggle("active");
@@ -51,16 +55,10 @@ document.addEventListener("DOMContentLoaded", () => {
   //   menuButton.setAttribute("aria-expanded", String(!!isOpen));
   // });
 
-   menuButton?.addEventListener("click", () => {
-       const isOpen = navLinks.classList.toggle("active");
-   
-       const icon = menuButton.querySelector("[data-lucide]");
-       icon.setAttribute("data-lucide", isOpen ? "x" : "menu");
-   
-       lucide.createIcons();
-   
-       menuButton.setAttribute("aria-expanded", isOpen);
-  });
+menuButton?.addEventListener("click", () => {
+    const isOpen = navLinks.classList.toggle("active");
+    menuButton.setAttribute("aria-expanded", isOpen);
+});
   document.querySelectorAll(".nav-links a").forEach(link => {
     link.addEventListener("click", closeMenu);
   });
